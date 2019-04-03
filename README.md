@@ -38,5 +38,8 @@ sign      unix  -       n       n       -       10      pipe
 
 You can now configure your favorite email client and do not forget to specify port TCP 2525 for the SMTP settings to send your signed emails.
 
+## Information
+Used wiki at openssl https://wiki.openssl.org/index.php/Command_Line_Utilities#Mail_.2F_SMIME
+
 ## Thanks
 Script info taken from site https://www.shellandco.net/blog/2016/02/09/digitally-sign-your-email-on-the-mta-side/
