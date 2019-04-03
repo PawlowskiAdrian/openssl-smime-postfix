@@ -19,8 +19,9 @@ So I found and change a little bit a script that get the outgoing message on the
 – Edit your /etc/postfix/master.cf . We will add a new TCP port for the smtpd. This port will be used on your mail/webmail client SMTP configuration. Add these lines:
 
 `2525      inet  n       -       -       -       -       smtpd
-  -o content_filter=sign:dummy
-sign      unix  -       n       n       -       10      pipe
+  -o content_filter=sign:dummy`
+
+`sign      unix  -       n       n       -       10      pipe
   flags=Rq user=pfsigner null_sender=
   argv=/usr/local/bin/sign.sh -f ${sender} -- ${recipient}`
 
