@@ -55,7 +55,7 @@ if [[ -f "${CERT_FILE}" ]] && [[ $CONTENT_TYPE != *"signed"* ]]; then
   sed '/Content-Type/,+1 d' <header.$$ >header2.$$
 
   # Sign the message body with OpenSSL
-  ${OPENSSL} cms -sign -signer ${CERT_FILE} -noattr -nodetach -in body2.$$ -out signed.$$
+  ${OPENSSL} smime -sign -signer ${CERT_FILE} -noattr -nodetach -in body2.$$ -out signed.$$
   sed '/Content-Type/,+1 d' <header.$$ >header2.$$
 
   # Concaetnante header and the signed message and send it using sendmail tool
