@@ -40,4 +40,4 @@ You can now configure your favorite email client and do not forget to specify po
 Used wiki at openssl https://wiki.openssl.org/index.php/Command_Line_Utilities#Mail_.2F_SMIME
 
 ## Thanks
-Script info taken from site https://www.shellandco.net/blog/2016/02/09/digitally-sign-your-email-on-the-mta-side/
+Script info taken from site https://www.shellandco.net/digitally-sign-your-email-on-the-mta-side/
