@@ -22,10 +22,13 @@ So I found and change a little bit a script that get the outgoing message on the
       flags=Rq user=pfsigner null_sender=
       argv=/usr/local/bin/sign.sh -f ${sender} -- ${recipient}
 
-– request your certificate using the procedure here and export the certificate+private key to a pfx file
+– request your certificate and export the certificate+private key to a pfx file
+
+    openssl pkcs12 -inkey /etc/letsencrypt/live/<domain>/privkey.pem -in /etc/letsencrypt/live/<domain>/fullchain.pem -export -out <domain>.pfx
+
 – convert your pfx file to pem (use your email name in the pem filename as shown below). If your email is youremail@yourdomain.com, use the following command:
 
-    openssl pkcs12 -in yourcert.pfx -out youremail@yourdomain.com.pem -nodes
+    openssl pkcs12 -in <domain>.pfx -out youremail@yourdomain.com.pem -nodes
 
 – create the folder certs
 
